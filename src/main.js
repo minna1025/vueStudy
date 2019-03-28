@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import App from './App.vue'
-import store from './store'
-import router from './router' // router 추가
+import store from './store/store'
+import router from './router/router' // router 추가
 import axios from 'axios'
 
 Vue.config.productionTip = false

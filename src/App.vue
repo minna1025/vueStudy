@@ -1,7 +1,7 @@
 <template>
   <div id="app">
-    <!-- <Header v-if="login" /> -->
-    <Popup v-if="popupShow" />
+    <Header v-if="store.state.login" />
+    <Popup v-if="store.state.popupShow" />
     <router-view />
   </div>
 </template>
@@ -9,7 +9,7 @@
 <script>
 import Popup from './components/Popup.vue'
 import Header from './components/Header.vue'
-import { store } from './store/index'
+import { store } from './store/store'
 
 export default {
   name: 'app',
@@ -19,9 +19,12 @@ export default {
   },
   data () {
     return {
-      store,
-      login: false,
-      popupShow: false
+      store
+    }
+  },
+  created () {
+    if ( !store.state.login ){
+        this.$router.push('/')
     }
   },
   method: {
@@ -35,8 +38,6 @@ export default {
     myProp(val, oldval) { val = oldval } 
   }
 }
-
-    console.log(store)
 </script>
 
 <style>
@@ -46,7 +47,6 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
 }
 button { display:inline-block; margin:10px auto;}
 </style>

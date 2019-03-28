@@ -6,7 +6,10 @@ Vue.use(Vuex)
 export const store = new Vuex.Store({
   state:{
     popupShow: false,
-    login: false
+    login: false,
+    sort: 'date',
+    tweets: [],
+    
   },
   mutations: {
     login (state) {
