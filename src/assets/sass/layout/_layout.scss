@@ -1,0 +1,28 @@
+#app { font-family: 'Avenir', Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; text-align: center; color: #2c3e50;}
+button { display:inline-block; margin:10px auto;}
+h3 { margin: 40px 0 0;}
+ul { list-style-type: none; padding: 0;}
+li { display: inline-block; margin: 0 10px; cursor:pointer; color:#333; list-style:none !important;}
+a { color: #42b983; display:inline-block; margin-left:10px; text-decoration:none; color:#333;}
+label { width:100px; margin:10px; text-align:right; display:inline-block;}
+input { padding:3px 5px;}
+
+.input-row { display:table; width:80%; margin:0 auto;}
+label { width:100px; margin:10px; text-align:right; display:inline-block; vertical-align:middle;}
+input { padding:3px 5px; height:20px; vertical-align:middle; display:table-cell;}
+
+#header { display:flex;}
+
+#app {
+  .login { width:350px; margin:0 auto; height:300px; position:absolute; top:50%; left:50%; transform:translate(-50%, -50%); border-radius:15px; z-index:1; background:rgba(0,0,0,0.05);
+    .title { position:relative; padding-top:50px;}
+  }
+}
+
+body { margin:0; padding:0;}
+#app:after { position:absolute; top:0; left:0; content:''; display:block; width:100vw; height:100vh; background:url('/assets/images/bg2.jpg') no-repeat; background-size:100% 100%; opacity:0.8 !important; filter:alpha(opacity=80); z-index:-1;}
+#app.bgLogin:before { content:''; display:block; width:350px; height:300px; background:url('/assets/images/bg2.jpg') center center; background-size:100vw 100vh; filter:blur(6px); top:50%; left:50%; transform:translate(-50%, -50%); position:absolute; z-index:1;}
+
+.login:before { content:''; display:block; width:100%; height:100%; position:absolute; z-index:-1;}
+.title:before { content:''; display:block; position:absolute; top:-25%; left:50%; transform:translate(-50%, -50%); width:100px; height:100px; 
+  border-radius:50%; background:red url("/static/images/frog.jpg"); background-size:cover; }

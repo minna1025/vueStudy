@@ -80,10 +80,3 @@ export default {
   }
 }
 </script>
-
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-.input-row { display:table; width:80%; margin:0 auto;}
-label { width:100px; margin:10px; text-align:right; display:inline-block; vertical-align:middle;}
-input { padding:3px 5px; height:20px; vertical-align:middle; display:table-cell;}
-</style>

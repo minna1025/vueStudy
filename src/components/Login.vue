@@ -1,6 +1,6 @@
 <template>
   <div class="login">
-    <h1>{{ title }}</h1>
+    <h1 class="title">{{ title }}</h1>
     <form v-on:submit.prevent="submit">
       <div>
         <label for="id">id</label>
@@ -11,7 +11,7 @@
         <input id="password" type="password" ref="pwd" placeholder="비밀버노 써줘...">
       </div>
       <div>
-        <button type="submit">Login</button>
+        <button type="submit">LOGIN</button>
         <router-link to="/join"><button>JOIN US</button></router-link>
       </div>
     </form>
@@ -19,7 +19,6 @@
 </template>
 
 <script>
-
 export default {
   name: 'Login',
   data () {
@@ -62,23 +61,3 @@ export default {
   }
 }
 </script>
-
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-h3 {
-  margin: 40px 0 0;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983; display:inline-block; margin-left:10px;
-}
-label { width:100px; margin:10px; text-align:right; display:inline-block;}
-input { padding:3px 5px;}
-</style>

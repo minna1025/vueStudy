@@ -30,7 +30,6 @@ export default {
   },
   methods: {
     addTweet: function() {
-      console.log(this.newTweet);
       this.newTweet = ''
     },
 

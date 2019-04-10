@@ -7,6 +7,7 @@ export const store = new Vuex.Store({
   state:{
     popupShow: false,
     login: false,
+    // login: true,
     sort: 'date',
     tweets: [],
     

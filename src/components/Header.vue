@@ -16,6 +16,13 @@ export default {
       store,
     }
   },
+  mounted () {
+    if ( !store.state.login ){
+      this.$router.push('/')
+      document.getElementById('app').classList.add('bgLogin');
+    }else {
+    }
+  },
   methods: {
     logout () {
       store.state.login = false
@@ -25,9 +32,3 @@ export default {
   }
 }
 </script>
-
-<style>
-#header { display:flex;}
-li { margin-left:auto; list-style:none; cursor:pointer; color:#333;}
-a { text-decoration:none; color:#333;}
-</style>

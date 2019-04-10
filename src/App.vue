@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app" class="">
     <Header v-if="store.state.login" />
     <Popup v-if="store.state.popupShow" />
     <router-view />
@@ -22,9 +22,10 @@ export default {
       store
     }
   },
-  created () {
+  mounted () {
     if ( !store.state.login ){
-        this.$router.push('/')
+      // this.$router.push('/')
+      document.getElementById('app').classList.add('bgLogin');
     }
   },
   method: {
@@ -40,13 +41,6 @@ export default {
 }
 </script>
 
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-button { display:inline-block; margin:10px auto;}
+<style lang="scss">
+   @import '/assets/sass/style.scss'
 </style>
