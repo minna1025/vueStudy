@@ -12,7 +12,7 @@
       </div>
       <div>
         <button type="submit">LOGIN</button>
-        <router-link to="/join"><button>JOIN US</button></router-link>
+        <router-link to="/join" class="button">JOIN US</router-link>
       </div>
     </form>
   </div>

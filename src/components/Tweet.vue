@@ -2,7 +2,7 @@
   <div id="tweet">
     <div id="wirte-wrap">
       <textarea v-model="newTweet" />
-      <button v-on:click="addTweet">남길래..</button>
+      <button id="writeBtn" type="submit">남길래..</button>
       <!-- <ul id="sort-wrap">
         <li><button id="sortBtnDate">Date</button></li>
         <li><button id="sortBtnTime">Time</button></li>
@@ -25,14 +25,31 @@ export default {
   data() {
     return {
       store,
-      newTweet: ""
+      newTweet: "",
     }
   },
   methods: {
     addTweet: function() {
       this.newTweet = ''
     },
+    submit() {
+      let tweets = this.$parent.store.state.tweets;
+      console.log(1);
+      const date = new Date();
+      let formattedDate = moment(date).format('YYYY.MM.DD');
 
+      console.log(2);
+      tweets.push({
+        index : tweets.length + 1,
+        thumb : 'none',
+        name : localStorage.getItem(user),
+        startDate : formattedDate,
+        msg : newTweet,
+      });
+
+      console.log(` end : ${tweets}`);
+      this.newTweet = ''
+    }
   }
 }
 </script>

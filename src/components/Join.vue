@@ -19,7 +19,8 @@
         <label for="agree-check">약관동의스</label>
       </div>
       <div>
-        <button type="submit">JOIN</button>
+        <button type="submit" id="joinBtn">JOIN</button>
+        <router-link to="/" class="button" id="backBtn">BACK</router-link>
       </div>
     </form>
   </div>
@@ -38,6 +39,9 @@ export default {
       pwd: '',
       pwdCheck: ''
     }
+  },
+  mounted () {
+    document.getElementById('app').classList.remove('bgLogin');
   },
   methods: {
     submit () {
@@ -75,7 +79,7 @@ export default {
       // this.$router.replace(this.$route.query.redirect || '/')
     },
     handleAgree () {
-      store.popupShow = !store.popupShow
+      this.$parent.store.state.popupShow = !this.$parent.store.state.popupShow
     }
   }
 }

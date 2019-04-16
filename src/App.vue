@@ -24,7 +24,7 @@ export default {
   },
   mounted () {
     if ( !store.state.login ){
-      // this.$router.push('/')
+      this.$router.push('/')
       document.getElementById('app').classList.add('bgLogin');
     }
   },

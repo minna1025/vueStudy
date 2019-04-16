@@ -10,7 +10,6 @@ export const store = new Vuex.Store({
     // login: true,
     sort: 'date',
     tweets: [],
-    
   },
   mutations: {
     login (state) {

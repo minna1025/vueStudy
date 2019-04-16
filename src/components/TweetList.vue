@@ -19,11 +19,14 @@ export default {
       tweets: []
     }
   },
+  mounted () {
+  },
   created () {
     this.$http.get('/backend/tweet.json')
       .then( (response) => {
         for ( var item in response.data ) {
           this.tweets.push(response.data[item]);
+          this.$parent.store.state.tweets.push(response.data[item]);
         }
       })
   },
