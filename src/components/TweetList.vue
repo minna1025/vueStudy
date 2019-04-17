@@ -20,8 +20,6 @@ export default {
     }
   },
   mounted () {
-  },
-  created () {
     this.$http.get('/backend/tweet.json')
       .then( (response) => {
         for ( var item in response.data ) {
@@ -29,6 +27,8 @@ export default {
           this.$parent.store.state.tweets.push(response.data[item]);
         }
       })
+  },
+  created () {
   },
   methods: {
 
